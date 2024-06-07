@@ -6,7 +6,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Inter", ...defaultTheme.fontFamily.sans],
+                sans: ["Hanken", ...defaultTheme.fontFamily.sans],
+                "hanken-grotesk": ["Hanken Grotesk", "sans-serif"],
             },
         },
     },
