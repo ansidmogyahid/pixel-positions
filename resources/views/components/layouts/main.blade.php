@@ -11,14 +11,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        @vite('resources/css/app.css')
+        @vite(['resources/js/app.js', 'resources/css/app.css'])
     </head>
     <body class="bg-black text-white font-hanken-grotesk antialiased">
         <div class="px-10">
             {{-- <nav class="flex items-center justify-between py-4"> --}}
             <nav class="flex justify-between items-center py-4 border-b border-white/10">
                 <div>
-                    <a href="">
+                    <a href="/">
                         <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="">
                     </a>
                 </div>
@@ -51,7 +51,9 @@
                 @endguest
             </nav>
 
-            <main class="mt-10 max-w-[986px] mx-auto">{{ $slot }}</main>
+            <main class="mt-10 max-w-[986px] mx-auto">
+                {{ $slot }}
+            </main>
         </div>
     </body>
 </html>
